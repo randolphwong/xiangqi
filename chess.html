@@ -1,19 +1,13 @@
 <html>
   <head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
-    <title>Play Chinese Chess Online Against the Computer with Western Pieces</title>
-<meta name="KeyWords" content="play, chinese, chess, online, against, computer, western, pieces,  how, rules, game, xiangqi, board, chessboard, chesspieces, strategy, games, free, sets, moves,  ancient , characters">    
-<meta name="Description" content="Play Chinese Chess online against the computer. Instead of the Chinese characters on most sets, Springfrog's version uses Western pieces whilst keeping faithful to the rules and a standard Xiangqi chessboard. Learn how to play, the moves of the chesspieces around the board and the rules of this ancient strategy game. Enjoy more free games at Springfrog too.">    
+    <meta http-equiv="Content-Type" content="text/html;">
+    <title>Play Chinese Chess</title>
 
     <script type="text/javascript" src="book.js"></script>
-    <script type="text/javascript" src="position.js"></script>
-    <script type="text/javascript" src="search.js"></script>
+    <script type="text/javascript" src="position.js"></script> <script type="text/javascript" src="search.js"></script>
     <script type="text/javascript" src="board.js"></script>
     <script type="text/javascript" src="cchess.js"></script>
     <style type="text/css"><!--
-body {
-  background: url(../background.gif);
-}
 
 span.td {
   display: inline-block;
@@ -53,52 +47,45 @@ label {
 
 <td ALIGN=LEFT VALIGN=TOP> 
 
-
-<p>
-<font face="arial,Helvetica"><font color="#003333">
-
-
-<p>
-
-
  <div style="margin: 1em; float: left; display: block; width: 1px;">
-
 
 </div>
     <div style="text-align:center;white-space:nowrap">
       <span class="td" style="margin-right:10px">
         <div id="container"></div>
-      </span><span class="td" style="vertical-align:top;width:120px;"><div style="text-align:left">
-        <!--<div class="label">谁先走?</div>-->
-        <div class="label">Who goes first?</div>
+      </span><span class="td" style="vertical-align:top;width:120px;font-weight:bold"><div style="text-align:left">
+        <div class="label">谁先走</div>
         <div><select id="selMoveMode" size="3">
-          <option selected value="0">Human</option>
-          <option value="1">Computer</option>
-          <option value="2">Play without computer</option>
+          <option selected value="0">玩家</option>
+          <option value="1">对手</option>
+          <option value="2">自己玩</option>
         </select></div>
-        <div class="label">Handicap</div>
+        <div style="height:10px"></div>
+        <div class="label">让棋</div>
         <div><select id="selHandicap" style="padding:0px">
-          <option selected value="0">No handicap</option>
-          <option value="1">Right horse</option>
-          <option value="2">Both horses</option>
-          <option value="3">Nine pieces</option>
+          <option selected value="0">不让棋</option>
+          <option value="1">右马</option>
+          <option value="2">双马</option>
+          <option value="3">九棋</option>
         </select></div>
-        <div style="padding-top:2px"><input type="button" class="button" value="Restart" onclick="restart_click()"></div>
-        <div style="padding-top:2px"><input type="button" class="button" value="Undo move" onclick="retract_click()"></div>
+        <div style="height:10px"></div>
+        <div style="padding-top:2px"><input type="button" class="button" value="重新" onclick="restart_click()"></div>
+        <div style="height:10px"></div>
+        <div style="padding-top:2px"><input type="button" class="button" value="回头" onclick="retract_click()"></div>
         <div style="height:12px"></div>
-        <div class="label">Computer skill level</div>
+        <div class="label">水平</div>
         <div><select id="selLevel" size="3" onchange="level_change()">
-          <option selected value="0">Beginner</option>
-          <option value="1">Amateur</option>
-          <option value="2">Professional</option>
+          <option selected value="0">1 (最烂)</option>
+          <option value="1">2</option>
+          <option value="2">3 (最强)</option>
         </select></div>
         <div style="height:12px"></div>
-        <div><input type="checkbox" class="checkbox" id="chkAnimated" checked onclick="board.animated = checked"><label for="chkAnimated">Animation</label></input></div>
-        <div><input type="checkbox" class="checkbox" checked onclick="board.setSound(checked)"><label for="chkSound">Sound</label></input></div>
+        <!--<div><input type="checkbox" class="checkbox" id="chkAnimated" checked onclick="board.animated = checked"><label for="chkAnimated">Animation</label></input></div>-->
+        <!--<div><input type="checkbox" class="checkbox" checked onclick="board.setSound(checked)"><label for="chkSound">Sound</label></input></div>-->
         <div style="height:60px"></div>
-        <div class="label">Moves</div>
+        <div class="label">步</div>
         <div><select id="selMoveList" size="10" style="font-family:宋体" onchange="moveList_change()">
-          <option selected value="0">=== Start ===</option>
+          <option selected value="0">=== 开始 ===</option>
         </select></div>
       </div></span>
     </div>
